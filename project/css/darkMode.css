@@ -1,0 +1,27 @@
+:root{
+    --primary : #2CD1EE ;
+    --secondary: #707070 ;
+    --light: #ffffff ;
+    --dark: #000000 ;
+}
+
+
+body.dark-mode{
+    background-color: black;
+   
+}
+
+.dark-mode{
+    transition: 0.3s;
+}
+
+.dark-mode .calculate h1{
+    color: #424242;
+}
+
+.dark-mode .history thead th{
+    color: #424242;
+}
+
+.dark-mode .history tr:hover {background-color: rgb(184, 182, 182);}
+

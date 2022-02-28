@@ -1,0 +1,276 @@
+:root{
+    --primary : #2CD1EE ;
+    --secondary: #707070 ;
+    --light: #ffffff ;
+    --dark: #000000 ;
+}
+
+@font-face {
+    font-family: "mm";
+    src: url("../fonts/Pyidaungsu-1.8.1_Bold.ttf");
+}
+
+.mm{
+    font-family: "mm";
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif ;
+
+}
+
+body{
+    transition: 0.3s;
+}
+
+
+
+.app{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.output{
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-img{
+
+   width: 50px;
+}
+
+.brand{
+    margin-left: 5px;
+    font-size: 30px;
+    color: var(--secondary);
+}
+
+
+.result{
+    font-size: 40px;
+    color: var(--secondary);
+}
+.line{
+    background-color:var(--secondary);
+    margin-top: 2px;
+    height:3px;
+}
+
+.calc{
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary);
+
+}
+.calc select,button{
+   cursor: pointer;
+}
+
+.calc input,select{
+    width: 150px;
+    border-color: var(--secondary);
+    border-width: 1px;
+    border-radius: 5px; 
+    height: 30px;
+    padding-left: 5px;
+    font-size:15px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+
+
+.calculate button{
+        width: 150px;
+        height: 76px;
+       background-color: var(--primary);
+       border: none;
+        border-radius: 5px;
+        color: #ffffff;
+}
+
+.calculate button:active{
+
+    background-color: #31c2db;
+}
+
+input:focus-visible, select:focus-visible{
+
+    outline: none;
+
+}
+
+#table-container{
+      width: 100%;
+}
+
+.history{
+   width: 100%;
+    border-collapse: separate;
+  
+}
+
+.history th{
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.history th, .history td{
+    border:none;
+    padding: 5px;
+    text-align: left;
+    border-radius: 3px;
+}
+
+.history td:first-child{
+    width: 250px;
+}
+
+.history tr{
+    background-color: #e7e6e6;
+}
+
+/* .history tr:nth-child(even){background-color: #c9c9c9;} */
+
+.history tr:hover {background-color: #ddd;}
+
+.dark-mode-container{
+    width: 50px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+
+}
+.dark-mode-container button{
+    width: 100%;
+    height: 25px;
+    border: 3px solid #707070;
+    border-radius:50px;
+    background-color: #c4c2c2;
+}
+
+.dark-mode-container button:active{
+    background-color: #d1d1d1;
+
+}
+
+.icon-container{
+    width: 100%;
+    height: 14px;
+    
+    
+}
+
+@keyframes move {
+    from{right: 10px;}
+    to{right: -10px;}
+ }
+
+.fa-moon{
+    width: 14px;
+    position: relative;
+    right: 10px;
+    bottom: 2px;
+  
+   
+}
+
+.fa-sun{
+    color:var(--light);
+    
+}
+
+.aa{
+    animation: move 0.2s 0s  ;
+    /* animation-direction: alternate; */
+    animation-fill-mode: forwards;
+}
+
+
+
+@media screen and (max-width : 600px){
+    body{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+       .app{
+           width: 90%;
+           display: flex;
+           flex-direction: column;
+           
+           
+       }
+
+       .output{
+           flex-wrap: wrap;
+           align-items: center;
+           justify-content: space-between;
+           margin-bottom: 5px;
+       }
+
+      /* .result-container{
+          display: flex;
+      } */
+
+      .result{
+          font-size:25px;
+          margin-top: 10px;
+      }
+
+      .calc{
+          height: 350px;
+          flex-wrap: wrap;
+      }
+
+      .input{
+          width: 100%;
+      }
+      .input input{
+          width: 100%;
+          height: 45px;
+          font-size: 20px;
+      }
+
+      .from select, .to select{
+          width: 200px;
+          height: 45px;
+          font-size: 18px;
+          color: var(--secondary);
+      }
+
+      .calculate{
+          width: 100%;
+          margin-bottom: 10px;
+      }
+
+      .calculate button{
+          width: 100%;
+          height: 50px;
+
+      }
+
+      .history td:first-child{
+         width: 120px;
+      }
+}
